@@ -12,7 +12,6 @@ import home
 import products
 import locations
 
-
 def run():
     st.set_page_config(
         page_title="Shopping Trends",
