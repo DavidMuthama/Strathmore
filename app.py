@@ -1,6 +1,13 @@
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
 # Importing Libraries
 import pandas as pd
 import numpy as np
+install(plotly)
 import plotly.express as px
 import streamlit as st
 from streamlit.components.v1 import html
