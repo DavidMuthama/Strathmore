@@ -12,6 +12,7 @@ import home
 import products
 import locations
 
+
 def run():
     st.set_page_config(
         page_title="Shopping Trends",
@@ -202,17 +203,17 @@ def run():
                 left_col, mid_col, right_col = st.columns(3)
 
                 with left_col:
-                    st.image("./dollar.png", caption="", width=70)
+                    st.image("./dollar.jpeg", caption="", width=70)
                     st.subheader("Total Sales")
                     st.subheader(products.total_sales(df_filtered))
 
                 with mid_col:
-                    st.image("./clothes.png", width=70)
+                    st.image("./clothes.jpeg", width=70)
                     st.subheader("Categories")
                     st.subheader(products.number_of_category(df))
 
                 with right_col:
-                    st.image("./online-shopping.png", width=70)
+                    st.image("./online-shopping.jpeg", width=70)
                     st.subheader("Products")
                     st.subheader(products.number_of_products(df_filtered))
                 st.markdown("---")
