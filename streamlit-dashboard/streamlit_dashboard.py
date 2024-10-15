@@ -15,7 +15,7 @@ st.write("This is a simple example dashboard with Plotly visualizations.")
 
 fig1 = px.line(data, x="year", y="population", color="sex", title="Population Over Time")
 st.plotly_chart(fig1)
-fig2 = px.pie(data, x="year", y="population", color="sex", title="Population Over Time")
+fig2 = px.pie(data,color="sex", title="Population Over Time")
 st.plotly_chart(fig2)
 
 fig3 = px.line(data, x="year", y="total_inactive_population", color="sex", title="Population Over Time")
