@@ -13,7 +13,7 @@ data = load_data()
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
 
-d = {'value_options': ['total_inactive_population', 'total_unemployed_population','total_employed_population','Electricity','Manufacturing'], 'vote_flash_gordon': [3,6,2,1,2]}
+d = {'value_options': ['male', 'female'], 'values': [sum(2+3),sum(5+3)]}
 df = pd.DataFrame(data=d)
 
 
