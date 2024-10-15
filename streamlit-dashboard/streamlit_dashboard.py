@@ -12,14 +12,14 @@ data = load_data()
 # Simple Streamlit app using Plotly
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
-test=[1,4,2,6,2,0,1,7,2,9]
-d = {'value_options': ['male', 'female'], 'values': [test]}
+
+d = {'value_options': ['male', 'female'], 'values': [sum(2+3),sum(5+3)]}
 df = pd.DataFrame(data=d)
 
 
 pie_chart = px.pie(df,
                    title="film: PLACEHOLDER",
-                   values="vote_flash_gordon",
+                   values="values",
                    names="value_options")
 
 st.plotly_chart(pie_chart)
