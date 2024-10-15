@@ -14,19 +14,19 @@ df = load_df()
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
 
-fig1 = px.line(df, x="year", y="total_inactive_population", color="sex",color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Inactive Population By Sex")
+fig1 = px.line(df, x="year", y="total_inactive_population",color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Inactive Population By Sex")
 st.plotly_chart(fig1)
 fig2 = px.pie(df, values='total_inactive_population', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Inactive Population By Sex")
 st.plotly_chart(fig2)
 
-fig3 = px.line(df, x="year", y="total_unemployed_population", color="sex", color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Unemployed Population")
+fig3 = px.line(df, x="year", y="total_unemployed_population", color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Unemployed Population")
 st.plotly_chart(fig3)
 fig4 = px.pie(df, values='total_unemployed_population', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Unemployed Population")
 st.plotly_chart(fig4)
 
-fig5 = px.line(df, x="year", y="total_employed_population", color="sex", color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Employed Population")
+fig5 = px.line(df, x="year", y="total_employed_population", color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Employed Population")
 st.plotly_chart(fig5)
 fig6 = px.pie(df, values='total_employed_population', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'pink'}, title="Total Employed Population")
