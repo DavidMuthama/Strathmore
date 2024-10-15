@@ -13,9 +13,20 @@ data = load_data()
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
 
+d = {'value_options': ['total_inactive_population', 'total_unemployed_population','total_employed_population','Electricity','Manufacturing'], 'vote_flash_gordon': [3,6,2,1,2]}
+df = pd.DataFrame(data=d)
+
+
+pie_chart = px.pie(df,
+                   title="film: PLACEHOLDER",
+                   values="vote_flash_gordon",
+                   names="value_options")
+
+st.plotly_chart(pie_chart)
+
 fig1 = px.line(data, x="year", y="population", color="sex", title="Population Over Time")
 st.plotly_chart(fig1)
-fig2 = px.pie(data,values='population',color="sex", title="Population Over Time")
+fig2 = px.pie(data,values='total_inactive_population',color="sex", title="Population Over Time")
 st.plotly_chart(fig2)
 
 fig3 = px.line(data, x="year", y="total_inactive_population", color="sex", title="Population Over Time")
