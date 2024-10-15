@@ -40,10 +40,10 @@ fig.add_trace(fig1.data[0], row=1, col=1)
 fig.add_trace(fig3.data[0], row=1, col=1)
 fig.add_trace(fig5.data[0], row=1, col=1)
 
-# Add the last three figures to the bottom subplot
-fig.add_trace(fig2.data[0], row=2, col=1)
-fig.add_trace(fig4.data[0], row=2, col=1)
-fig.add_trace(fig6.data[0], row=2, col=1)
+# # Add the last three figures to the bottom subplot
+# fig.add_trace(fig2.data[0], row=2, col=1)
+# fig.add_trace(fig4.data[0], row=2, col=1)
+# fig.add_trace(fig6.data[0], row=2, col=1)
 
 # Update the layout
 fig.update_layout(height=600)
