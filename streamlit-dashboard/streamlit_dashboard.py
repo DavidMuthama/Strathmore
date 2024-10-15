@@ -12,8 +12,8 @@ data = load_data()
 # Simple Streamlit app using Plotly
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
-
-d = {'value_options': ['male', 'female'], 'values': [sum(2+3),sum(5+3)]}
+test=[1,4,2,6,2,0,1,7,2,9]
+d = {'value_options': ['male', 'female'], 'values': [test]}
 df = pd.DataFrame(data=d)
 
 
