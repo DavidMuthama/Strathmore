@@ -37,8 +37,8 @@ fig7 = px.pie(df_grouped, values='Basic_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'yellow'}, title="Unemployment status by basic education",hole=0.5)
 st.plotly_chart(fig7)
 fig9 = px.pie(df_grouped, values='Intermediate_unemployment', names='sex', color='sex',
-             color_discrete_map={'male':'blue', 'female':'yellow'}, title="Unemployment status by intermediate education",hole=0.5)
+             color_discrete_map={'male':'blue', 'female':'green'}, title="Unemployment status by intermediate education",hole=0.5)
 st.plotly_chart(fig9)
 fig11 = px.pie(df_grouped, values='Advanced_unemployment', names='sex', color='sex',
-             color_discrete_map={'male':'blue', 'female':'yellow'}, title="Unemployment status by advanced education",hole=0.5)
+             color_discrete_map={'male':'blue', 'female':'brown'}, title="Unemployment status by advanced education",hole=0.5)
 st.plotly_chart(fig11)
