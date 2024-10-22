@@ -9,7 +9,7 @@ def load_df():
     return pd.read_csv('streamlit-dashboard/dataset.csv') 
 
 df = load_df()
-df_grouped = df.groupby(['year', 'sex'])[['total_inactive_population', 'total_unemployed_population', 'total_employed_population']].sum().reset_index()
+df_grouped = df.groupby(['year', 'sex'])[['total_inactive_population', 'total_unemployed_population', 'total_employed_population','Basic_unemployment','Intermediate_unemployment','Advanced_unemployment']].sum().reset_index()
 # Simple Streamlit app using Plotly
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
