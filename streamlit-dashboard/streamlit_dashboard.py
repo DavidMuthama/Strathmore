@@ -10,7 +10,7 @@ def load_df():
 
 df = load_df()
 df_grouped = df.groupby(['year', 'sex'])[['total_inactive_population', 'total_unemployed_population', 'total_employed_population','Basic_unemployment','Intermediate_unemployment','Advanced_unemployment','age_group']].sum().reset_index()
-df['age_group'] = pd.cut(df['age'], bins=[14, 24, 35, 100], labels=['15-24', '25-35', '35+'], right=False)
+df['age_group'] = pd.cut(df['age_group'], bins=[14, 24, 35, 100], labels=['15-24', '25-35', '35+'], right=False)
 agegrouping = df.groupby(['age_group', 'sex'])['Basic_unemployment'].sum().reset_index()
 # Simple Streamlit app using Plotly
 st.title("Streamlit Dashboard with Plotly")
