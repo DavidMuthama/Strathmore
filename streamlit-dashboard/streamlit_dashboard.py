@@ -9,9 +9,7 @@ def load_df():
     return pd.read_csv('streamlit-dashboard/dataset.csv') 
 
 df = load_df()
-df_grouped = df.groupby(['year', 'sex'])[['total_inactive_population', 'total_unemployed_population', 'total_employed_population','Basic_unemployment','Intermediate_unemployment','Advanced_unemployment','age_group']].sum().reset_index()
-df['age'] = pd.cut(df['age_group'], bins=[14, 24, 35, 100], labels=['15-24', '25-35', '35+'], right=False)
-agegrouping = df.groupby(['age', 'sex'])['Basic_unemployment'].sum().reset_index()
+df_grouped = df.groupby(['year', 'sex'])[['total_inactive_population', 'total_unemployed_population', 'total_employed_population','Basic_unemployment','Intermediate_unemployment','Advanced_unemployment']].sum().reset_index()
 # Simple Streamlit app using Plotly
 st.title("Streamlit Dashboard with Plotly")
 st.write("This is a simple example dashboard with Plotly visualizations.")
@@ -38,11 +36,9 @@ st.plotly_chart(fig6)
 fig7 = px.pie(df_grouped, values='Basic_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'yellow'}, title="Unemployment status by basic education",hole=0.5)
 st.plotly_chart(fig7)
-fig8 = px.bar(df_grouped, x='age', y='Basic_unemployment', color='sex',
-              color_discrete_map={'male': 'blue', 'female': 'pink'},
-              title='Sum of Unemployment by Basic Ed and Age Group')
+fig8=px.bar(df_grouped,x='age',y='Basic_unemployment',color='sex',color_discrete_map={'male':'blue', 'female':'pink'},title='sum of unemployment by basic ed')
 st.plotly_chart(fig8)
-fig9 = px.pie(agegrouping, values='Intermediate_unemployment', names='sex', color='sex',
+fig9 = px.pie(df_grouped, values='Intermediate_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'green'}, title="Unemployment status by intermediate education",hole=0.5)
 st.plotly_chart(fig9)
 fig11 = px.pie(df_grouped, values='Advanced_unemployment', names='sex', color='sex',
