@@ -36,11 +36,15 @@ st.plotly_chart(fig6)
 fig7 = px.pie(df_grouped, values='Basic_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'yellow'}, title="Unemployment status by basic education",hole=0.5)
 st.plotly_chart(fig7)
-fig8=px.bar(df,x='age_group',y='Basic_unemployment',color='sex',color_discrete_map={'male':'blue', 'female':'pink'},title='sum of unemployment by basic ed')
+fig8=px.bar(df,x='age_group',y='Basic_unemployment',color='sex',color_discrete_map={'male':'blue', 'female':'yellow'},title='sum of unemployment by basic ed')
 st.plotly_chart(fig8)
 fig9 = px.pie(df_grouped, values='Intermediate_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'green'}, title="Unemployment status by intermediate education",hole=0.5)
 st.plotly_chart(fig9)
+fig10=px.bar(df,x='age_group',y='Intermediate_unemployment',color='sex',color_discrete_map={'male':'blue', 'female':'green'},title='sum of unemployment by intermediate ed')
+st.plotly_chart(fig10)
 fig11 = px.pie(df_grouped, values='Advanced_unemployment', names='sex', color='sex',
              color_discrete_map={'male':'blue', 'female':'brown'}, title="Unemployment status by advanced education",hole=0.5)
 st.plotly_chart(fig11)
+fig12=px.bar(df,x='age_group',y='Advanced_unemployment',color='sex',color_discrete_map={'male':'blue', 'female':'brown'},title='sum of unemployment by advanced ed')
+st.plotly_chart(fig12)
