@@ -34,5 +34,5 @@ st.plotly_chart(fig6)
 
 
 fig7 = px.pie(df_grouped, values='Basic_unemployment', names='sex', color='sex',
-             color_discrete_map={'male':'blue', 'female':'yellow'}, title="Employment status by basic education",hole=1)
+             color_discrete_map={'male':'blue', 'female':'yellow'}, title="Employment status by basic education",hole=0.5)
 st.plotly_chart(fig7)
